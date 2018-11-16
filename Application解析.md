@@ -25,3 +25,56 @@
 		3. onTrimMemory（）
 			1. 通知 应用程序 当前内存使用情况（以内存级别进行识别）
 			2. 根据当前内存使用情况进行自身的内存资源的不同程度释放，以避免被系统直接杀掉 & 优化应用程序的性能体验
+		4. onConfigurationChanged（）监听 应用程序 配置信息的改变，如屏幕旋转等
+		5. registerActivityLifecycleCallbacks（） & unregisterActivityLifecycleCallbacks（）注册 / 注销对 应用程序内 所有Activity的生命周期监听，当应用程序内 Activity生命周期发生变化时就会调用
+
+
+
+
+			    registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
+	            @Override
+	            public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
+	                Log.d(TAG,"onActivityCreated: " + activity.getLocalClassName());
+	            }
+	
+	            @Override
+	            public void onActivityStarted(Activity activity) {
+	                Log.d(TAG,"onActivityStarted: " + activity.getLocalClassName());
+	            }
+	
+	            @Override
+	            public void onActivityResumed(Activity activity) {
+	                Log.d(TAG,"onActivityResumed: " + activity.getLocalClassName());
+	            }
+	
+	            @Override
+	            public void onActivityPaused(Activity activity) {
+	                Log.d(TAG,"onActivityPaused: " + activity.getLocalClassName());
+	            }
+	
+	            @Override
+	            public void onActivityStopped(Activity activity) {
+	                Log.d(TAG, "onActivityStopped: " + activity.getLocalClassName());
+	            }
+	
+	            @Override
+	            public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
+	            }
+	
+	            @Override
+	            public void onActivityDestroyed(Activity activity) {
+	                Log.d(TAG,"onActivityDestroyed: " + activity.getLocalClassName());
+	     	       }
+	     		   });
+
+
+		6. onTerminate（）应用程序结束时调用，但该方法只用于Android仿真机测试，在Android产品机是不会调用的
+
+
+###应用场景
+1. 从Application类的方法可以看出，Application类的应用场景有：
+	1. 初始化应用级别的资源，如全局对象，环境配置变量等
+	2. 数据共享，数据缓存，如设置全局共享变量，方法等
+	3. 获取应用程序当前的内存使用情况，及时的释放资源，从而避免被系统杀死；
+	4. 监听应用程序配置信息的改变，如屏幕旋转等
+	5. 监听应用程序内，所有的Actvity的生命周期
