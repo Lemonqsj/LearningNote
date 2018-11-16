@@ -1,5 +1,6 @@
 ##git 指令说明
-###1. git add 
+##一、增加和删除文件
+### 1. git add 
 1. 描述
 	1. 此命令将要提交的文件的信息添加到索引库中（将修改添加到暂存区），以准备为下一次提交分段的内容。
 	2. 在git commit之前必须使用git add命令将任何新的修改的文件添加到索引；
@@ -25,3 +26,10 @@
 	2. git status先看一下add中的文件
 	3. git reset HEAD 如果后面什么都不跟的话就是将上一次add里面的全部撤销了；
 	4. git reset HEAD  XXX/XXX/XXX.java就是将对某一个文件撤销了；
+
+###2. git rm
+1. 删除本地和远程的文件(本地和远程仓库的文件都会被删除)
+	1. git rm xxx/xxx.java  （  删除工作区文件，并且将这次删除放入暂存区）
+	2. git commit -m "删除文件"
+	3. git push -u origin master
+2. 
