@@ -37,4 +37,9 @@
 	2. git commit -m "删除远程文件"
 	3. git push -u origin master
 
+##二、提交代码
+###1. git commit 命令用于将暂存区中的变化提交到仓库区。
+1.  git commit -m "message" (-m参数用于指定 commit 信息，是必需的。如果省略-m参数，git commit会自动打开文本编辑器，要求输入)
+2.   git commit <filename>  -m "message"  : git commit命令可以跳过暂存区，直接将文件从工作区提交到仓库区。
+
 
