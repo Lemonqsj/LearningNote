@@ -32,4 +32,9 @@
 	1. git rm xxx/xxx.java  （  删除工作区文件，并且将这次删除放入暂存区）
 	2. git commit -m "删除文件"
 	3. git push -u origin master
-2. 
+2. 只删除远程的文件
+	1. git rm --cached xxx/xxx.java
+	2. git commit -m "删除远程文件"
+	3. git push -u origin master
+
+
