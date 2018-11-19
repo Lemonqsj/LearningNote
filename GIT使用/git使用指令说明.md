@@ -43,3 +43,5 @@
 2.   git commit <filename>  -m "message"  : git commit命令可以跳过暂存区，直接将文件从工作区提交到仓库区。
 
 
+###2. git status 查看工作目录和暂存区的状态
+
