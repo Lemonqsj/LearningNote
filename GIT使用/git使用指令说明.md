@@ -44,4 +44,5 @@
 
 
 ###2. git status 查看工作目录和暂存区的状态
+1. git status 查看当前
 
