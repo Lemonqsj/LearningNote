@@ -45,4 +45,29 @@
 
 ###2. git status 查看工作目录和暂存区的状态
 1. 作用：使用此命令能看到那些修改被暂存到了，那些没有，那些文件有没有被git tracked到，git status不显示已经commit到项目历史中去的信息
+2. git status -s 使用，可以简便显示信息
 
+
+
+##三、分支管理
+###1. 创建分支  git branch <本地分支名>
+1. 创建本地分支的两种办法：
+	1. git branch <本地分支名>
+	2. git checkout -b <本地分支名>  ；创建本地分支并且切换到新创建的分支上
+
+2. 删除本地分支 git branch -d <本地分支名>
+	1. 查看分支名
+		1. git branch  查看本地分支名
+		2. git branch -a 查看远程分支名和本地分支
+
+	2. 删除本地分支git branch -d <本地分支名>
+
+3. 创建远程分支：也就是提交本地分支到远程分支
+	1. git push origin <本地分支名>  
+
+4. 删除远程分支：
+	1. git push origin --delete <远程分支>
+
+5. 本地分支与远程分支光联
+	1. git branch -set-upstream <本地分支名> origin/<远程分支名>
+	2. 本地分支和远程分支关联之后就可以不用指定本地和远程分支名了，可以直接进行推送和拉取了
