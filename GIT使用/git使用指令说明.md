@@ -50,9 +50,16 @@
 
 ##四、 拉去代码git pull/git fetch
 ###1. git pull
-1. git pull origin <remote_branch>：<local_branch>
+1. git pull origin <remote_branch>：<local_branch> 这个是拉取合并到不是当前本地分支上
 2. git pull origin <remote_branch>将远程的指定分支上的信息拉去并合并到当前分支上
 3. git pull 将本地当前分支关联的远程分支上的信息拉取到本地并合并
 
+###2.git fetch
+1. git fetch origin master:tmp
+	1. git fetch origin master:tmp//在本地新建一个tmp分支，并拉取master分支的代码到本地
+	2. git diff tmp//将本地代码和刚刚拉取到tmp分支的代码做比较
+	3. git merge tmp//合并tmp的代码到master分支上
+	4. git branch -d tmp/删除tmp分支
 
-
+2. git fetch origin//指定了远程主机名通常远程和本地的分支默认是master分支
+3. git fetch origin dev//指定了远程分支，只会拉取远程指定分支的修改部分；
