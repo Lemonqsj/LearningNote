@@ -46,3 +46,13 @@
 ###2. git status 查看工作目录和暂存区的状态
 1. git status 查看当前
 
+
+
+##四、 拉去代码git pull/git fetch
+###1. git pull
+1. git pull origin <remote_branch>：<local_branch>
+2. git pull origin <remote_branch>将远程的指定分支上的信息拉去并合并到当前分支上
+3. git pull 将本地当前分支关联的远程分支上的信息拉取到本地并合并
+
+
+
