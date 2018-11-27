@@ -94,4 +94,5 @@
 3. git fetch origin dev//指定了远程分支，只会拉取远程指定分支的修改部分；
 ###3. git fetch 和git pull的区别
 1. 差异：git pull 是git fetch 和 git merge两个步骤的结合；
+2. git pull 会自动merge，而git fetch并不会自动合并，需要手动合并
 
