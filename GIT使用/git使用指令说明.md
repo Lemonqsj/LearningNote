@@ -1,3 +1,4 @@
+
 ##git 指令说明
 ##一、增加和删除文件
 ### 1. git add 
@@ -44,7 +45,7 @@
 
 
 ###2. git status 查看工作目录和暂存区的状态
-1. 作用：使用此命令能看到那些修改被暂存到了，那些没有，那些文件有没有被git tracked到，git status不显示已经commit到项目历史中去的信息
+1. git status 查看当前 作用：使用此命令能看到那些修改被暂存到了，那些没有，那些文件有没有被git tracked到，git status不显示已经commit到项目历史中去的信息
 2. git status -s 使用，可以简便显示信息
 
 
@@ -71,3 +72,25 @@
 5. 本地分支与远程分支光联
 	1. git branch -set-upstream <本地分支名> origin/<远程分支名>
 	2. 本地分支和远程分支关联之后就可以不用指定本地和远程分支名了，可以直接进行推送和拉取了
+
+
+
+
+
+##四、 拉去代码git pull/git fetch
+###1. git pull
+1. git pull origin <remote_branch>：<local_branch> 这个是拉取合并到不是当前本地分支上
+2. git pull origin <remote_branch>将远程的指定分支上的信息拉去并合并到当前分支上
+3. git pull 将本地当前分支关联的远程分支上的信息拉取到本地并合并
+
+###2.git fetch
+1. git fetch origin master:tmp
+	1. git fetch origin master:tmp//在本地新建一个tmp分支，并拉取master分支的代码到本地
+	2. git diff tmp//将本地代码和刚刚拉取到tmp分支的代码做比较
+	3. git merge tmp//合并tmp的代码到master分支上
+	4. git branch -d tmp/删除tmp分支
+
+2. git fetch origin//指定了远程主机名通常远程和本地的分支默认是master分支
+3. git fetch origin dev//指定了远程分支，只会拉取远程指定分支的修改部分；
+###3. git fetch 和git pull的区别
+
