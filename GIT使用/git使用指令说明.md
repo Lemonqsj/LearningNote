@@ -93,4 +93,5 @@
 2. git fetch origin//指定了远程主机名通常远程和本地的分支默认是master分支
 3. git fetch origin dev//指定了远程分支，只会拉取远程指定分支的修改部分；
 ###3. git fetch 和git pull的区别
+1. 差异：git pull 是git fetch 和 git merge两个步骤的结合；
 
