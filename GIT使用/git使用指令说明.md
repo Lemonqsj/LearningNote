@@ -1,6 +1,8 @@
 
 ##git 指令说明
+
 ##一、增加和删除文件
+
 ### 1. git add 
 1. 描述
 	1. 此命令将要提交的文件的信息添加到索引库中（将修改添加到暂存区），以准备为下一次提交分段的内容。
@@ -39,6 +41,7 @@
 	3. git push -u origin master
 
 ##二、提交代码
+
 ###1. git commit 命令用于将暂存区中的变化提交到仓库区。
 1.  git commit -m "message" (-m参数用于指定 commit 信息，是必需的。如果省略-m参数，git commit会自动打开文本编辑器，要求输入)
 2.   git commit <filename>  -m "message"  : git commit命令可以跳过暂存区，直接将文件从工作区提交到仓库区。
@@ -51,6 +54,7 @@
 
 
 ##三、分支管理
+
 ###1. 创建分支  git branch <本地分支名>
 1. 创建本地分支的两种办法：
 	1. git branch <本地分支名>
@@ -78,6 +82,7 @@
 
 
 ##四、 拉去代码git pull/git fetch
+
 ###1. git pull
 1. git pull origin <remote_branch>：<local_branch> 这个是拉取合并到不是当前本地分支上
 2. git pull origin <remote_branch>将远程的指定分支上的信息拉去并合并到当前分支上
@@ -96,3 +101,8 @@
 1. 差异：git pull 是git fetch 和 git merge两个步骤的结合；
 2. git pull 会自动merge，而git fetch并不会自动合并，需要手动合并
 
+##五、代码合并
+
+###1. git merge 
+
+###2. git rebase
