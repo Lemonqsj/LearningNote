@@ -123,3 +123,26 @@
 --soft：只是改变HEAD指针指向，缓存区和工作区不变
 --mixed：修改HEAD指针指向，缓存区内容丢失，工作区不变
 --hard：修改HEAD指针指向，暂存区内容丢失，工作区回复以前的状态；
+
+##七.查看历史记录
+1. git log # 查看所有commit记录(SHA-A校验和，作者名称，邮箱，提交时间，提交说明)
+2. git log -p -次数 # 查看最近多少次的提交记录
+3. git log --stat # 简略显示每次提交的内容更改
+4. git log --name-only # 仅显示已修改的文件清单
+5. git log --name-status # 显示新增，修改，删除的文件清单
+6. git log --oneline # 让提交记录以精简的一行输出
+7. git log –graph –all --online # 图形展示分支的合并历史
+8. git log --author=作者  # 查询作者的提交记录(和grep同时使用要加一个--all--match参数)
+9. git log --grep=过滤信息 # 列出提交信息中包含过滤信息的提交记录
+10. git log -S查询内容 # 和--grep类似，S和查询内容间没有空格
+11. git log fileName # 查看某文件的修改记录，找背锅专用
+
+##八.比较文件异同
+1. git diff # 工作区与暂存区的差异
+2. git diff 分支名 #工作区与某分支的差异，远程分支这样写：remotes/origin/分支名
+3. git diff HEAD  # 工作区与HEAD指针指向的内容差异
+4. git diff 提交id 文件路径 # 工作区某文件当前版本与历史版本的差异
+5. git diff --stage # 工作区文件与上次提交的差异(1.6 版本前用 --cached)
+6. git diff 版本TAG # 查看从某个版本后都改动内容
+7. git diff 分支A 分支B # 比较从分支A和分支B的差异(也支持比较两个TAG)
+8. git diff 分支A...分支B # 比较两分支在分开后各自的改动git diff # 工作区与暂存区的差异
