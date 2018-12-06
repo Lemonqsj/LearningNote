@@ -106,4 +106,20 @@
 
 ###1. git merge 
 
-###2. git rebase
+1. git merge dev //用于合并dev分支到当前分支
+2. git merge --no-ff -m "merge with no-ff" dev //加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并；
+
+##六、代码回滚
+
+###1. git reset HEAD^
+1. 恢复成上次提交的版本
+
+###2. git reset HEAD^^
+1. 恢复成上上次提交的版本，就是多加了^,以此类推或者使用~次数
+
+###3. git reflog
+
+###4. git reset --hard 版本号
+--soft：只是改变HEAD指针指向，缓存区和工作区不变
+--mixed：修改HEAD指针指向，缓存区内容丢失，工作区不变
+--hard：修改HEAD指针指向，暂存区内容丢失，工作区回复以前的状态；
